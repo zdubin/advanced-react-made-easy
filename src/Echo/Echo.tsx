@@ -19,10 +19,9 @@ export class Echo extends React.Component<any, { messages: string[], sentMessage
   componentDidMount() {
     // this is an "echo" websocket service
     /// Please set up a local web socket server from this page: https://www.lob.com/blog/websocket-org-is-down-here-is-an-alternative
-    this.connection = new WebSocket('wss://socketsbay.com/wss/v2/1/demo/');
+    this.connection = new WebSocket('ws://localhost:10000'); 
     this.connection.onopen = () => console.log("ws opened");
     this.connection.onclose = () => console.log("ws closed");
-
 
     // listen to onmessage event
 
