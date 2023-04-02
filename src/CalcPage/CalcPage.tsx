@@ -1,0 +1,111 @@
+import React, { useEffect, useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import Typography from '@mui/material/Typography';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import Button from '@mui/material/Button';
+import { AnyAction, Dispatch } from "@reduxjs/toolkit";
+
+import { RootState } from '../store/store';
+import {
+    addition,
+    division,
+    multiplication,
+    subtraction
+} from '../store/CalcSlice';
+import './CalcPage.scss';
+import { CalcState } from "../AppTypes/AppTypes";
+import '../App.scss';
+
+// Simple FC to display and dispatch actions using the Redux pattern and includes a redux-thunk side effect
+//  of loading the API data after an arithmatic operation takes place.
+const CalcPage = () => {
+    const [firstValue, setFirstValue] = useState<number>(0);
+    const [secondValue, setSecondValue] = useState<number>(0);
+    const calcValues: CalcState = useSelector((state: RootState) => state.calc);
+    const dispatch: Dispatch<AnyAction> = useDispatch();
+
+    useEffect(() => {
+        // add the new message to state
+        setFirstValue(calcValues.firstValue);
+        setSecondValue(calcValues.secondValue);
+    },
+        [calcValues.firstValue, calcValues.secondValue]);
+
+    return (
+        <div >
+            <h1>Redux</h1>
+            First Value :{' '}
+            <input onChange={event => setFirstValue(Number(event.target.value))} value={firstValue === 0 ? '' : firstValue}
+                type="number"
+            />
+            <br />
+            <br />
+            Second Value :{' '}
+            <input
+                onChange={event => setSecondValue(Number(event.target.value))} value={secondValue === 0 ? '' : secondValue}
+                type="number"
+            />
+            <br />
+            <br />
+            <span className='button-space'>
+                <Button className='button-space' variant="contained" onClick={() => dispatch(addition({ firstValue, secondValue }))}>
+                    Addition
+                </Button>
+            </span>
+            <span className='button-space'>
+                <Button className='button-space' variant="outlined" onClick={() => dispatch(division({ firstValue, secondValue }))}>
+                    Division
+                </Button>
+            </span>
+            <span className='button-space'>
+                <Button className='button-space' variant="contained"
+                    onClick={() => dispatch(multiplication({ firstValue, secondValue }))}
+                >
+                    Multiplication
+                </Button>
+            </span>
+            <span className='button-space'>
+                <Button className='button-space' variant="outlined"
+                    onClick={() => dispatch(subtraction({ firstValue, secondValue }))}
+                >
+                    Subtraction
+                </Button>
+            </span>
+            <hr />
+            {calcValues.total ?
+                <h4 className='calc__answer'>{calcValues.firstValue} {calcValues.lastOperation} {calcValues.secondValue} = {calcValues.total}</h4>
+                : <></>
+            }
+            {calcValues?.articles?.length ? <h5>Side Effect Middleware (Redux Thunk)</h5> : <></>
+            }
+            {calcValues?.articles?.map(art =>
+                <Accordion className='calc__accordion'>
+                    <AccordionSummary
+                        expandIcon={<ExpandMoreIcon />}
+                        aria-controls="panel1a-content"
+                        id={art.title.substring(0, 10)}
+                        key={art.title.substring(0, 10)}
+                    >
+                        <Typography>{art.title.substring(0, 150)}</Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                        <Typography>
+                            <>
+                                <div className=''
+                                >{art.description}</div>
+                                {art?.img ? <img alt={art.description.substring(0,20)} className='calc__accordion__details__image' src={art?.img} /> : <></>}
+                            </>
+                        </Typography>
+                    </AccordionDetails>
+                </Accordion>
+            )}
+        </div>
+
+    );
+};
+
+export default CalcPage;

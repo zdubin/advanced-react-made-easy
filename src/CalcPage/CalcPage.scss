@@ -1,0 +1,23 @@
+.calc {
+  &__answer {
+    margin-bottom: 15px;
+    color: blue;
+  }
+  &__accordion {
+    width: 600px;
+    border: dotted 1px lightgrey;
+    &__details {
+      &__text-section {
+        background-color: lavender;
+        border-radius: 5px;
+        margin-bottom: 5px;
+        padding: 5px;
+      }
+      &__image
+      {
+        width: 566px;
+      }
+    }
+  }
+
+}

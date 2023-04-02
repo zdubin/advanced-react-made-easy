@@ -1,0 +1,16 @@
+.echo {
+  padding: 5px;
+  &__section {
+    min-height: 200px;
+    min-width: 500px;
+    margin: 10px;
+    padding: 5px;
+    &--sent {
+      background-color: lavender;
+    }
+    &--received {
+      background-color: lightgreen;
+    }
+  }
+
+}

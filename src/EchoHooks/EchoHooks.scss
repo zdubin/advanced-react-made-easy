@@ -1,0 +1,14 @@
+.echo-hooks {
+  padding: 5px;
+  &__section {
+    margin: 15px;
+    min-height: 150px;
+    &--sent {
+      background-color: lavender;
+    }
+    &--received {
+      background-color: lightgreen;
+    }
+  }
+
+}
