@@ -2,6 +2,11 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Get an apiKey here: https://newsapi.org/register and replace XXXXXX in this call: 'https://newsapi.org/v2/everything?q=tech&apiKey=XXXXXX
+in the store.ts file
+
+Create a local web socket server per these instructions: https://www.lob.com/blog/websocket-org-is-down-here-is-an-alternative
+
 ## Available Scripts
 
 In the project directory, you can run:
