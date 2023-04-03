@@ -12,6 +12,7 @@ const EchoHooksPreview = lazy(() => import('./EchoHooks/EchoHooks'));
 const EchoPreview = lazy(() => import('./Echo/Echo'));
 const ProtoTestPreview = lazy(() => import('./ProtoTest/ProtoTest'));
 const CalcPagePreview = lazy(() => import('./CalcPage/CalcPage'));
+const GraphDemoPreview  = lazy(() => import('./GraphDemo/GraphDemo'));
 
 // All lazy load components for our React Router
 const lazyComponents: LazyComponent[] = [
@@ -21,6 +22,7 @@ const lazyComponents: LazyComponent[] = [
     { name: 'Echo Websocket', url: '/echo', component: EchoHooksPreview },
     { name: 'Echo Websocket Classes', url: '/echoclasses', component: EchoPreview },
     { name: 'Prototype Test', url: '/prototest', component: ProtoTestPreview },
+    { name: 'Graph Demo', url: '/graphdemo', component: GraphDemoPreview}
 ];
 
 // This HOC simply formats the NavLink's for the React Router and displays them at the top of the page and counts them
