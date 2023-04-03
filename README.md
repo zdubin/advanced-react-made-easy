@@ -1,5 +1,7 @@
 # Getting Started with Create React App
 
+Advanced React concepts made easy. TypeScript, Redux toolkit, higher order components, custom hooks, middleware, web sockets, context, error handling, sass, old style class components and more.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 Get an apiKey here: https://newsapi.org/register and replace XXXXXX in this call: 'https://newsapi.org/v2/everything?q=tech&apiKey=XXXXXX
