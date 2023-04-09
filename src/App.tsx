@@ -12,7 +12,7 @@ const EchoHooksPreview = lazy(() => import('./EchoHooks/EchoHooks'));
 const EchoPreview = lazy(() => import('./Echo/Echo'));
 const ProtoTestPreview = lazy(() => import('./ProtoTest/ProtoTest'));
 const CalcPagePreview = lazy(() => import('./CalcPage/CalcPage'));
-const GraphDemoPreview  = lazy(() => import('./GraphDemo/GraphDemo'));
+const GraphDemoPreview = lazy(() => import('./GraphDemo/GraphDemo'));
 
 // All lazy load components for our React Router
 const lazyComponents: LazyComponent[] = [
@@ -22,7 +22,7 @@ const lazyComponents: LazyComponent[] = [
     { name: 'Echo Websocket', url: '/echo', component: EchoHooksPreview },
     { name: 'Echo Websocket Classes', url: '/echoclasses', component: EchoPreview },
     { name: 'Prototype Test', url: '/prototest', component: ProtoTestPreview },
-    { name: 'Graph Demo', url: '/graphdemo', component: GraphDemoPreview}
+    { name: 'Graph Demo', url: '/graphdemo', component: GraphDemoPreview }
 ];
 
 // This HOC simply formats the NavLink's for the React Router and displays them at the top of the page and counts them
@@ -95,21 +95,21 @@ function App() {
                 <Router>
                     <>
                         <SimpleHOCShowRoutes>
-                            {[{ name: 'Home', url: '/' }, ...lazyComponents].map(componentObj =>
-                                <NavLink to={componentObj.url}>
+                            {[{ name: 'Home', url: '/' }, ...lazyComponents].map((componentObj,i) =>
+                                <NavLink key={`nav-${i}`} to={componentObj.url}>
                                     {componentObj.name}
                                 </NavLink>
                             )}
                         </SimpleHOCShowRoutes>
                         <div className='panel' >
                             <Routes>
-                                <Route path="/" element={
-                                    <p>Home Sweet Home...</p>}>
+                                <Route key={`route---0`} path="/" element={
+                                    <span>Home Sweet Home...</span>}>
                                 </Route>
-                                {lazyComponents.map(componentObj =>
+                                {lazyComponents.map((componentObj,i) =>
                                     <Route path={componentObj.url} element={
-                                        <div className="App">
-                                            <Suspense fallback={<p>Loading...</p>}>
+                                        <div key={`rou-${i}`} className="App">
+                                            <Suspense fallback={<span>Loading...</span>}>
                                                 <componentObj.component />
                                             </Suspense>
                                         </div>}>
