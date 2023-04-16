@@ -47,7 +47,7 @@ const EchoHooks = () => {
   }
 
   useEffect(() => {
-    openSock();
+  //  openSock();
     return () => clearSocket();
   }, []);
 
@@ -82,12 +82,12 @@ const EchoHooks = () => {
     </span>
     <h2>Sent Messages</h2>
     <div className='echo-hooks curved-edges echo-hooks__section echo-hooks__section--sent'>
-      <ol >{sentMessages.map((msg, idx) => msg ? <li key={'msg-' + idx}>{msg}</li> : <></>)}</ol>
+      <ol >{sentMessages.map((msg, idx) => msg ? <li key={'msgs-' + idx}>{msg}</li> : null)}</ol>
     </div>
     <h2>Received Messages</h2>
     <div className='echo-hooks curved-edges echo-hooks__section echo-hooks__section--received'>
 
-      <ol >{messages.map((msg, idx) => <li key={'msg-' + idx}>{msg}</li>)}</ol>
+      <ol >{messages.map((msg, idx) => <li key={'msgr-' + idx}>{msg}</li>)}</ol>
     </div>
   </div>
 

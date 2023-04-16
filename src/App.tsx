@@ -13,6 +13,7 @@ const EchoPreview = lazy(() => import('./Echo/Echo'));
 const ProtoTestPreview = lazy(() => import('./ProtoTest/ProtoTest'));
 const CalcPagePreview = lazy(() => import('./CalcPage/CalcPage'));
 const GraphDemoPreview = lazy(() => import('./GraphDemo/GraphDemo'));
+const AgGridDemo = lazy(() => import('./AgGridDemo/AgGridDemo'));
 
 // All lazy load components for our React Router
 const lazyComponents: LazyComponent[] = [
@@ -22,7 +23,9 @@ const lazyComponents: LazyComponent[] = [
     { name: 'Echo Websocket', url: '/echo', component: EchoHooksPreview },
     { name: 'Echo Websocket Classes', url: '/echoclasses', component: EchoPreview },
     { name: 'Prototype Test', url: '/prototest', component: ProtoTestPreview },
-    { name: 'Graph Demo', url: '/graphdemo', component: GraphDemoPreview }
+    { name: 'Graph Demo', url: '/graphdemo', component: GraphDemoPreview },
+    { name: 'AG Grid Demo', url: '/aggriddemo', component: AgGridDemo },
+
 ];
 
 // This HOC simply formats the NavLink's for the React Router and displays them at the top of the page and counts them
@@ -33,9 +36,9 @@ export const SimpleHOCShowRoutes = ({ children }: childProps) => {
         <>
             <div className='panel' >
                 {React.Children.map(children, (child, i) => {
-                    return <div style={{ minWidth: `${minWidth}%` }}>
-                        <div className="curved-edges panel__items">
-                            <strong className='panel__items__text-content' >{i}.</strong>
+                    return <div style={{ minWidth: `${minWidth}%` }} key={`nav-${i}`}>
+                        <div className="curved-edges panel__items" >
+                            <strong  className='panel__items__text-content' >{i}.</strong>
                             {child}
                         </div>
                     </div>
@@ -107,8 +110,8 @@ function App() {
                                     <span>Home Sweet Home...</span>}>
                                 </Route>
                                 {lazyComponents.map((componentObj,i) =>
-                                    <Route path={componentObj.url} element={
-                                        <div key={`rou-${i}`} className="App">
+                                    <Route key={`rou-${i}`} path={componentObj.url} element={
+                                        <div  className="App" >
                                             <Suspense fallback={<span>Loading...</span>}>
                                                 <componentObj.component />
                                             </Suspense>

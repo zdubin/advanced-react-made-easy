@@ -8,10 +8,11 @@
     border: dotted 1px lightgrey;
     &__details {
       &__text-section {
-        background-color: lavender;
+        background-color: lavender!important;
         border-radius: 5px;
         margin-bottom: 5px;
         padding: 5px;
+        display: block;
       }
       &__image
       {

@@ -82,22 +82,30 @@ const CalcPage = () => {
             }
             {calcValues?.articles?.length ? <h5>Side Effect Middleware (Redux Thunk)</h5> : <></>
             }
-            {calcValues?.articles?.map(art =>
-                <Accordion className='calc__accordion'>
+            {calcValues?.articles?.map((art,i) =>
+                <Accordion className='calc__accordion'
+                key={`acc-${i}`+art.title.substring(0, 10)}
+                >
                     <AccordionSummary
                         expandIcon={<ExpandMoreIcon />}
                         aria-controls="panel1a-content"
                         id={art.title.substring(0, 10)}
-                        key={art.title.substring(0, 10)}
+                        key={'as'+art.title.substring(0, 10)}
                     >
-                        <Typography>{art.title.substring(0, 150)}</Typography>
+                        <Typography key={'t' + art.title.substring(0, 10)}
+                        >{art.title.substring(0, 150)}</Typography>
                     </AccordionSummary>
-                    <AccordionDetails>
-                        <Typography>
+                    <AccordionDetails
+                        key={'d' + art.title.substring(0, 10)}
+                    >
+                        <Typography
+                            key={'t2' + art.title.substring(0, 10)}
+
+                        >
                             <>
-                                <div className=''
-                                >{art.description}</div>
-                                {art?.img ? <img alt={art.description.substring(0,20)} className='calc__accordion__details__image' src={art?.img} /> : <></>}
+                                <span className='calc__accordion__details__text-section'
+                                >{art.description}</span>
+                                {art?.img ? <img alt={art.description.substring(0, 20)} className='calc__accordion__details__image' src={art?.img} /> : <></>}
                             </>
                         </Typography>
                     </AccordionDetails>

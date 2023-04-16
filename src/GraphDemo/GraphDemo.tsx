@@ -11,7 +11,12 @@ Highcharts3D(Highcharts);
 
 const GraphDemo: React.FC = () => {
 
-    const getOptions = (type: string): { plotOptions: { [p: string]: { depth: number } }; yAxis: { title: { text: string } }; xAxis: ({ visible: boolean } | { visible: boolean } | { visible: boolean })[]; credits: { enabled: boolean }; series: ({ xAxis: number; data: number[] } | { xAxis: number; data: number[] } | { xAxis: number; data: number[] })[]; title: { text: string }; chart: { options3d: { depth: number; alpha: number; enabled: boolean; beta: number }; type: string } } => ({
+    const getOptions = 
+    (type: string): { plotOptions: { [p: string]: { depth: number } }; yAxis: { title: { text: string } }; xAxis: ({ visible: boolean } | { visible: boolean } | { visible: boolean })[]; 
+    credits: { enabled: boolean }; series: ({ xAxis: number; data: number[] } | { xAxis: number; data: number[] } | { xAxis: number; data: number[] })[]; title: { text: string }; chart: 
+    { options3d: { depth: number; alpha: number; enabled: boolean; beta: number }; type: string }, accessibility: {
+        enabled: boolean
+      } } => ({
         chart: {
             type,
             options3d: {
@@ -62,6 +67,10 @@ const GraphDemo: React.FC = () => {
         credits: {
             enabled: false,
         },
+        accessibility: {
+            enabled: false
+          }
+        
     });
 
     return (
