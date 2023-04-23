@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-Advanced React concepts made easy. TypeScript, Redux toolkit, higher order components, custom hooks, middleware, web sockets, context, error handling, sass, old style class components, charting and more.
+Advanced React concepts made easy. TypeScript, Redux toolkit, higher order components, custom hooks, middleware, web sockets, context, error handling, sass, old style class components, charting, AgGrid and more.
 g
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
