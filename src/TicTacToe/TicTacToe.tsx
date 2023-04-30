@@ -28,8 +28,8 @@ const TicTacToe: React.FC = () => {
     const didWin = (): XorO | null => {
         // diag win
 
-        if (board[0][0] === board[1][1] && board[1][1] === board[2][2] ||
-            board[0][2] === board[1][1] && board[1][1] === board[2][0])
+        if ((board[0][0] === board[1][1] && board[1][1] === board[2][2] ||
+            board[0][2] === board[1][1] && board[1][1] === board[2][0]) && (board[1][1] === 'X' || board[1][1] === 'O'))
             return board[0][0] ?? null;
 
         for (let i = 0; i < 3; i++) {
