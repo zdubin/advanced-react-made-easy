@@ -33,9 +33,11 @@ const TicTacToe: React.FC = () => {
             return board[0][0] ?? null;
 
         for (let i = 0; i < 3; i++) {
+            console.log(board);
             if (board[i][0] === board[i][1] && board[i][1] === board[i][2])
                 return board[i][0] ?? null;
         }
+
 
         for (let j = 0; j < 3; j++)
             if (board[0][j] === board[1][j] && board[1][j] === board[2][j])
