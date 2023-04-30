@@ -31,3 +31,5 @@ export type LazyComponent = {
 export type CounterExampleProps = {
     initialValue: number;
 }
+
+export type XorO = 'X' | 'O' | null;

@@ -14,6 +14,7 @@ const ProtoTestPreview = lazy(() => import('./ProtoTest/ProtoTest'));
 const CalcPagePreview = lazy(() => import('./CalcPage/CalcPage'));
 const GraphDemoPreview = lazy(() => import('./GraphDemo/GraphDemo'));
 const AgGridDemo = lazy(() => import('./AgGridDemo/AgGridDemo'));
+const TicTacToe = lazy(() => import('./TicTacToe/TicTacToe'));
 
 // All lazy load components for our React Router
 const lazyComponents: LazyComponent[] = [
@@ -25,6 +26,7 @@ const lazyComponents: LazyComponent[] = [
     { name: 'Prototype Test', url: '/prototest', component: ProtoTestPreview },
     { name: 'Graph Demo', url: '/graphdemo', component: GraphDemoPreview },
     { name: 'AG Grid Demo', url: '/aggriddemo', component: AgGridDemo },
+    { name: 'Tic Tac Toe', url: '/tictactow', component: TicTacToe },
 
 ];
 
