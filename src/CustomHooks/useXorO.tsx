@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { XorO } from "../AppTypes/AppTypes";
 
 export function useXorO(): [() => XorO ,() => void] {

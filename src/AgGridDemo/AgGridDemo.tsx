@@ -9,8 +9,11 @@ import {
     GetRowIdParams,
     RowSelectedEvent,
     ValueFormatterParams,
+    ICellRendererParams,
+    CellRendererSelectorResult,
 } from 'ag-grid-community';
 import { useWindowSize, Size } from '../CustomHooks/useWindowSize';
+import MoodRenderer from './MoodRenderer';
 
 interface ICar {
     make: string;
@@ -33,7 +36,15 @@ const AgGridDemo = () => {
         { make: 'Porsche', model: 'Boxster', price: 72000 },
     ]);
     const [columnDefs, setColumnDefs] = useState<ColDef[]>([
-        { headerName: 'Make', field: 'make' },
+        {
+            headerName: 'Make', field: 'make',
+            cellRendererSelector: (params: ICellRendererParams<ICar>): CellRendererSelectorResult | undefined => {
+                return {
+                    component: MoodRenderer,
+                };
+            },
+            filter: 'agSetColumnFilter'
+        },
         { headerName: 'Model', field: 'model' },
         {
             headerName: 'Price',

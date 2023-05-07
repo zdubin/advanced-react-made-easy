@@ -19,7 +19,21 @@ import {
 import './CalcPage.scss';
 import { CalcState } from "../AppTypes/AppTypes";
 import '../App.scss';
+/** 
+const getStars = (num: any): number[] => {
+    let fullStars=Math.floor(num);
+    let rounding = num -  Math.floor(num) > 0 && num -  Math.floor(num) < .5   ? .5 : 1;
+    fullStars = fullStars + rounding;
+    let emptyStars=5.0 - fullStars
 
+    
+    return [fullStars ,emptyStars]
+}
+
+console.log('GETSTARS',getStars(4.4))
+console.log('GETSTARS',getStars(4.7))
+console.log('GETSTARS',getStars(2.36))
+**/
 // Simple FC to display and dispatch actions using the Redux pattern and includes a redux-thunk side effect
 //  of loading the API data after an arithmatic operation takes place.
 const CalcPage = () => {
