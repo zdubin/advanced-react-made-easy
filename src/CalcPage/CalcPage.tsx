@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
+import { Alert } from '@mui/material';
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
@@ -14,7 +15,7 @@ import {
     addition,
     division,
     multiplication,
-    subtraction
+    subtraction,
 } from '../store/CalcSlice';
 import './CalcPage.scss';
 import { CalcState } from "../AppTypes/AppTypes";
@@ -95,6 +96,9 @@ const CalcPage = () => {
                 : <></>
             }
             {calcValues?.articles?.length ? <h5>Side Effect Middleware (Redux Thunk)</h5> : <></>
+            }
+            {
+                calcValues.is_loading ? <Alert severity="info">Loading...</Alert> : null
             }
             {calcValues?.articles?.map((art,i) =>
                 <Accordion className='calc__accordion'

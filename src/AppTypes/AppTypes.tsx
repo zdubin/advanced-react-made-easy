@@ -21,7 +21,7 @@ export interface CalcState {
     total?: number;
     lastOperation?: string;
     articles?: Article[];
-
+    is_loading?: boolean;
 }
 export type LazyComponent = {
     name: string;

@@ -1,10 +1,11 @@
-import {createSlice, MiddlewareAPI, PayloadAction, Dispatch} from '@reduxjs/toolkit';
+import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 import {Article,CalcState} from "../AppTypes/AppTypes";
 
 export const initialState: CalcState = {
     firstValue: 0,
     secondValue: 0,
-    total: 0
+    total: 0,
+    is_loading: false
 };
 
 
@@ -39,7 +40,10 @@ export const calcSlice = createSlice({
         },
         load_articles: (state, action: PayloadAction<Article[]>) => {
             state.articles = action.payload;
-        }
+        },
+        set_is_loading: (state, action: PayloadAction<boolean>) => {
+            state.is_loading = action.payload;
+        },
     }
 });
 
@@ -48,7 +52,8 @@ export const {
     division,
     multiplication,
     subtraction,
-    load_articles
+    load_articles,
+    set_is_loading
 } = calcSlice.actions;
 
 export default calcSlice.reducer;
