@@ -56,7 +56,7 @@ const TicTacToe: React.FC = () => {
         return null;
     },[board])
 
-    const memoizedDidWin = useMemo<XorO | null>(() => didWin(), [currentXorO])
+    const memoizedDidWin = useMemo<XorO | null>(() => didWin(), [didWin])
 
 
     return (
