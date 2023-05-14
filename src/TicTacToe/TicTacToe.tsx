@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useCallback, useMemo, useState } from "react";
 import { Button } from "reactstrap";
 
 import { useXorO } from "../CustomHooks/useXorO";
@@ -26,8 +26,9 @@ const TicTacToe: React.FC = () => {
         setBoard(nextBoard);
     }
 
-    const didWin = (): XorO | null => {
+    const didWin = useCallback((): XorO | null => {
         // diag win
+
         console.table(board)
         if ((board[0][0] && board[0][0] === board[1][1] && board[1][1] === board[2][2]) ||
             (board[0][2] === board[1][1] && board[1][1] === board[2][0]) ) // && (board[1][1] === 'X' || board[1][1] === 'O'))
@@ -53,25 +54,29 @@ const TicTacToe: React.FC = () => {
             }
 
         return null;
-    }
+    },[board])
+
+    const memoizedDidWin = useMemo<XorO | null>(() => didWin(), [currentXorO])
+
 
     return (
         <>
-            {didWin() ? <h1>** {didWin()} Won**</h1> :
+            {memoizedDidWin ? <h1>** {memoizedDidWin} Won**</h1> :
                 <h1>Turn {currentXorO()}</h1>
             }
             <div className="game-board">
                 {
                     board.map((row, i) =>
                         row.map((_, j) => <div key={`row_${i}_${j}`} className="box">
-                            <Spot spotValue={board[i][j]} setPiece={() => setPiece(i, j)} didWin={didWin} />
+                            <Spot spotValue={board[i][j]} setPiece={() => setPiece(i, j)} didWin={() => memoizedDidWin} />
                         </div>
                         )
                     )
                 }
 
             </div>
-            <Button className='button-space' color="warning" onClick={() => setBoard([...emptyBoard])}>Reset</Button>
+            <Button className='button-space' color="warning" onClick={() => setBoard([...emptyBoard])
+                                                        }>Reset</Button>
         </>
     )
 }
