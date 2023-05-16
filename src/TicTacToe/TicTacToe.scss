@@ -23,4 +23,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  &__winning {
+    border: 6px solid red;
+  }
 }

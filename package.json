@@ -58,6 +58,7 @@
   },
   "devDependencies": {
     "@types/react": "^18.0.33",
+    "eslint-plugin-react-hooks": "^4.6.0",
     "prettier": "2.8.7",
     "sass": "^1.60.0"
   }
