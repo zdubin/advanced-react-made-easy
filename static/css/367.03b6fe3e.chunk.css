@@ -1,0 +1,2 @@
+.game-board{background-color:#34495e;border:6px solid #2c3e50;border-radius:10px;color:#fff;display:grid;grid-template:repeat(3,1fr)/repeat(3,1fr);height:600px;margin:0 auto 20px;width:600px}.box{align-items:center;border:6px solid #2c3e50;border-radius:2px;display:flex;font-family:Helvetica;font-size:4em;font-weight:700;justify-content:center}.box__winning{border:6px solid red}
+/*# sourceMappingURL=367.03b6fe3e.chunk.css.map*/
