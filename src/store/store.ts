@@ -5,7 +5,7 @@ export const myAPISideEffectMiddleware = ({ dispatch, getState }: MiddlewareAPI)
     // Here you have access to `action.type` and `action.payload`
     console.log('Logging action with type', action.type);
     // Get an apiKey here: https://newsapi.org/register and replace XXXXXX
-    const url: string = 'https://newsapi.org/v2/everything?q=tech&apiKey=XXXXXX';
+    const url: string = 'https://newsapi.org/v2/everything?q=tech&apiKey=c8ed61ab623e44c7af2bec4299313dd8';
 
     if (action.type !== 'calc/load_articles' && action.type !== 'calc/set_is_loading') {
         dispatch(set_is_loading(true));

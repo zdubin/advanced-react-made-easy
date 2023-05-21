@@ -95,6 +95,7 @@ function App() {
     }).then(() => console.log(4));
     console.log(5);
 
+
     // Use lazyComponents array to construct NavLinks and Routes
     return (
         <Provider store={store}>
