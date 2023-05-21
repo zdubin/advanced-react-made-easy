@@ -1,5 +1,4 @@
-import React, {
-    Component,
+import  {
     forwardRef,
     useImperativeHandle,
     useState,
@@ -21,5 +20,5 @@ export default forwardRef((props: ICellRendererParams, ref) => {
         };
     });
 
-    return <span>{props.value}<img width="20px" src={mood} style={{ paddingLeft: '5px' }} /></span>;
+    return <span>{props.value}<img width="20px" src={mood} style={{ paddingLeft: '5px' }} alt="mood"/></span>;
 });

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect } from "react";
 
 const useFetch = (url: string, iteration?: number):[{name: string}[] | null,  React.Dispatch<React.SetStateAction<{name: string}[] | null>>] => {
     const [data, setData] = useState<{name: string}[] | null>(null);

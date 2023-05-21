@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect, MutableRefObject } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import Button from '@mui/material/Button';
 import '../App.scss';
 import './EchoHooks.scss';
@@ -25,7 +25,7 @@ const EchoHooks = () => {
   }
   const sendSocket2Secs = () => {
     timerid.current = setInterval(() => {
-      const browser: string = navigator.userAgent.search('Chrome') != -1 ? 'Chrome' : 'FireFox';
+      const browser: string = navigator.userAgent.search('Chrome') !== -1 ? 'Chrome' : 'FireFox';
       const message: string = `Zvi Dubin: ${Math.random()}: ${new Date().toISOString()}: ${browser}`;
       tmp_connection?.current?.send(message);
       setSentMessage(message);
@@ -56,14 +56,14 @@ const EchoHooks = () => {
     setMessages([...messages, message].filter(mes => mes.substring(0, 3) === 'Zvi').slice(-5));
     console.log(messages);
   },
-    [message]);
+    [message,messages]);
 
   useEffect(() => {
     // add the new message to state
     setSentMessages([...sentMessages, sentMessage].slice(-5));
     console.log(sentMessages);
   },
-    [sentMessage]);
+    [sentMessage,sentMessages]);
 
   return <div>
     <span className='button-space'>

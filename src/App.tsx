@@ -1,6 +1,6 @@
-import React, { lazy, Suspense, createContext, useMemo, useState, Children, useContext } from "react";
+import React, { lazy, Suspense, createContext, useMemo, useState, Children } from "react";
 //import CounterExample from './CounterExample';
-import { BrowserRouter as Router, Routes, Route, NavLink } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, NavLink  } from "react-router-dom";
 import { Provider } from 'react-redux';
 import { store } from './store/store';
 import { UserType, childProps, LazyComponent } from './AppTypes/AppTypes';
@@ -103,7 +103,7 @@ function App() {
                 <Router>
                     <>
                         <SimpleHOCShowRoutes>
-                            {[{ name: 'Home', url: '/' }, ...lazyComponents].map((componentObj,i) =>
+                            {[{ name: 'Home', url: '/advanced-react-made-easy' }, ...lazyComponents].map((componentObj,i) =>
                                 <NavLink key={`nav-${i}`} to={componentObj.url}>
                                     {componentObj.name}
                                 </NavLink>
