@@ -56,14 +56,14 @@ const EchoHooks = () => {
     setMessages([...messages, message].filter(mes => mes.substring(0, 3) === 'Zvi').slice(-5));
     console.log(messages);
   },
-    [message,messages]);
+    [message]);
 
   useEffect(() => {
     // add the new message to state
     setSentMessages([...sentMessages, sentMessage].slice(-5));
     console.log(sentMessages);
   },
-    [sentMessage,sentMessages]);
+    [sentMessage]);
 
   return <div>
     <span className='button-space'>
