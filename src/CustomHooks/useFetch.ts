@@ -5,9 +5,9 @@ const useFetch = (url: string, iteration?: number):[{name: string}[] | null,  Re
 
     useEffect(() => {
         fetch(url)
-            .then((res) => res.json())
-            .then((data) => setData(data))
-            .catch((error) => setData([{name: `${url} ${error}`}]) );
+            ?.then((res) => res.json())
+            ?.then((data) => setData(data))
+            ?.catch((error) => setData([{name: `${url} ${error}`}]) );
     }, [url, iteration]);
 
     return [data,setData];

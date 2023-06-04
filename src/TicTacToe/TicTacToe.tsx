@@ -62,14 +62,14 @@ const TicTacToe: React.FC = () => {
     return (
         <>
             {memoizedDidWin ? <h1>** {memoizedDidWin} Won**</h1> :
-                <h1>Turn {currentXorO()}</h1>
+                <h1 data-testid='turn'>Turn {currentXorO()}</h1>
             }
             <div className="game-board">
                 {
                     board.map((row, i) =>
-                        row.map((_, j) => <div key={`row_${i}_${j}`}
+                        row.map((_, j) => <div key={`row_${i}_${j}`}  data-testid={`row-${i}-${j}`}
                             className={winningSquares?.some(([a, b]) => a === i && b === j) ? "box box__winning" : "box"}>
-                            <Spot spotValue={board[i][j]} setPiece={() => setPiece(i, j)} didWin={() => memoizedDidWin} />
+                            <Spot row={i} column={j} spotValue={board[i][j]} setPiece={() => setPiece(i, j)} didWin={() => memoizedDidWin} />
                         </div>
                         )
                     )

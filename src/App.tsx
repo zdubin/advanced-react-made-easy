@@ -1,6 +1,6 @@
 import React, { lazy, Suspense, createContext, useMemo, useState, Children } from "react";
 //import CounterExample from './CounterExample';
-import { BrowserRouter as Router, Routes, Route, NavLink  } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, NavLink, Navigate  } from "react-router-dom";
 import { Provider } from 'react-redux';
 import { store } from './store/store';
 import { UserType, childProps, LazyComponent } from './AppTypes/AppTypes';
@@ -111,7 +111,7 @@ function App() {
                         </SimpleHOCShowRoutes>
                         <div className='panel' >
                             <Routes>
-                                <Route key={`route---0`} path="/" element={
+                                <Route key={`route---0`} path="/advanced-react-made-easy" element={
                                     <span>Home Sweet Home...</span>}>
                                 </Route>
                                 {lazyComponents.map((componentObj,i) =>
@@ -124,6 +124,11 @@ function App() {
                                     </Route>
                                 )
                                 }
+                                    <Route
+                                        path="*"
+                                        element={<Navigate to="/advanced-react-made-easy" replace />}
+                                />
+
                             </Routes>
                         </div>
                     </>
