@@ -2,7 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Advanced React concepts made easy. React 18, suspense, TypeScript, Redux toolkit, higher order components, custom hooks, thunk middleware, lazy loading, web sockets, context, error handling, sass, old style class components, charting, AgGrid, Tic Tac Toe and more.
+Advanced React concepts made easy. React 18, suspense, TypeScript, Redux Toolkit, Higher Order Components, Custom Hooks, Thunk Middleware, Lazy Loading, Web Sockets, Context, Error Handling, SASS, old style Class Components, charting, AgGrid, Tic Tac Toe, Unit T ests and more.
 
 Get an apiKey here: https://newsapi.org/register and replace XXXXXX in this call: 'https://newsapi.org/v2/everything?q=tech&apiKey=XXXXXX
 in the store.ts file

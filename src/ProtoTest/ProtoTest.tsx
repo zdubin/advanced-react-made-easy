@@ -1,7 +1,7 @@
 import React from 'react';
 import './ProtoTest.scss';
 
-const  PlaceHolder: React.FC = (): JSX.Element => {
+const  ProtoTest: React.FC = (): JSX.Element => {
     function test()
     {
     }
@@ -33,4 +33,4 @@ const  PlaceHolder: React.FC = (): JSX.Element => {
         </div>
     </div>;
 }
-export default PlaceHolder;
+export default ProtoTest;

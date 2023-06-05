@@ -19,7 +19,7 @@ const PlaceHolder: React.FC = (): JSX.Element =>
     const { name } = useContext<UserType>(UserContext);
 
     return <div >
-                <h3>Result : {calcValues.total}</h3>
+                <h3>Result : {calcValues?.total}</h3> 
                 <h2>Users :{name}: placeholder</h2>
         <h4>Iteration: {iteration}</h4>
         <Button  variant="contained" onClick={() => setIteration(iteration+1 )} style={{marginBottom: '5px',marginLeft: '2px'}}>
