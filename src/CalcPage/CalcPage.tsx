@@ -67,7 +67,7 @@ const CalcPage = () => {
             <br />
             <br />
             <span className='button-space'>
-                <Button className='button-space' variant="contained" onClick={() => dispatch(addition({ firstValue, secondValue }))}>
+                <Button data-testid='addbutton' className='button-space' variant="contained" onClick={() => dispatch(addition({ firstValue, secondValue }))}>
                     Addition
                 </Button>
             </span>
@@ -92,7 +92,7 @@ const CalcPage = () => {
             </span>
             <hr />
             {calcValues.total ?
-                <h4 className='calc__answer'>{calcValues.firstValue} {calcValues.lastOperation} {calcValues.secondValue} = {calcValues.total}</h4>
+                <h4 className='calc__answer' data-testid='total'>{calcValues.firstValue} {calcValues.lastOperation} {calcValues.secondValue} = {calcValues.total}</h4>
                 : <></>
             }
             {calcValues?.articles?.length ? <h5>Side Effect Middleware (Redux Thunk)</h5> : <></>

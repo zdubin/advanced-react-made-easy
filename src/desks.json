@@ -1,0 +1,87 @@
+[
+  {
+    "id": "fc0b19e3-b0d3-4ac7-a409-1e77a9e6e3f6",
+    "name": "Esse",
+    "market": "Equity"
+  },
+  {
+    "id": "a2beb5eb-5da6-4cf7-8cff-b31137c5624f",
+    "name": "Repellat",
+    "market": "Metals"
+  },
+  {
+    "id": "1b5b93aa-b222-4293-a454-6cc76d9a2979",
+    "name": "Quisquam",
+    "market": "Freight"
+  },
+  {
+    "id": "4543d539-77c0-42e6-b992-007fe5662a34",
+    "name": "Recusandae",
+    "market": "Plastics and Chemicals"
+  },
+  {
+    "id": "e54a0864-b6d6-4462-9816-ae41484eb53d",
+    "name": "Alias",
+    "market": "Economy"
+  },
+  {
+    "id": "cf44934e-1851-47a8-b18e-e618071df374",
+    "name": "Consequuntur",
+    "market": "Equity"
+  },
+  {
+    "id": "8b09e6b9-6541-4e53-b5a9-c67c4971cf28",
+    "name": "Corporis",
+    "market": "Climate"
+  },
+  {
+    "id": "1246a8d9-415d-49fb-b11e-ef9cfb89d74d",
+    "name": "Ratione",
+    "market": "Foreign Exchange"
+  },
+  {
+    "id": "4c6dc297-623f-44b9-b875-f7202c560965",
+    "name": "Ut",
+    "market": "Plastics and Chemicals"
+  },
+  {
+    "id": "985838ff-ae5c-466d-8807-87f08964b13d",
+    "name": "Sunt",
+    "market": "Interest Rates"
+  },
+  {
+    "id": "e4975f1d-f034-41ea-bc9c-af9dd7133490",
+    "name": "Qui",
+    "market": "Equity"
+  },
+  {
+    "id": "6435b8c1-753e-4bcd-b1b9-34b723a5fbb8",
+    "name": "Amet",
+    "market": "Equity"
+  },
+  {
+    "id": "16a5c1f5-62ea-4386-919a-3352a5a60942",
+    "name": "Iure",
+    "market": "Climate"
+  },
+  {
+    "id": "3ba88ba7-9e01-4a1f-9cdf-11fc6a200233",
+    "name": "Libero",
+    "market": "Corporate Credit"
+  },
+  {
+    "id": "21eacbfd-744d-4a05-8283-8869617a6bd7",
+    "name": "Nulla",
+    "market": "Freight"
+  },
+  {
+    "id": "e62b3680-f6f7-4f1d-9115-ac44c695c768",
+    "name": "Quam",
+    "market": "Economy"
+  },
+  {
+    "id": "b2b542e7-dfb8-45fa-b922-0c9cacf5ef85",
+    "name": "Ipsam",
+    "market": "Agriculture"
+  }
+]

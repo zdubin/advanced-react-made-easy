@@ -15,19 +15,20 @@ const CalcPagePreview = lazy(() => import('./CalcPage/CalcPage'));
 const GraphDemoPreview = lazy(() => import('./GraphDemo/GraphDemo'));
 const AgGridDemo = lazy(() => import('./AgGridDemo/AgGridDemo'));
 const TicTacToe = lazy(() => import('./TicTacToe/TicTacToe'));
+
 //const StyledComponentDemo = lazy(() => import('./StyledComponentDemo/StyledComponentDemo'));
 
 // All lazy load components for our React Router
 const lazyComponents: LazyComponent[] = [
+    { name: 'Tic Tac Toe', url: '/tictactow', component: TicTacToe },
+    { name: 'Graph Demo', url: '/graphdemo', component: GraphDemoPreview },
+    { name: 'AG Grid Demo', url: '/aggriddemo', component: AgGridDemo },
     { name: 'Counter', url: '/index', component: CounterExamplePreview },
     { name: 'Users', url: '/users', component: PlaceHolderPreview },
     { name: 'Calc', url: '/calc', component: CalcPagePreview },
     { name: 'Echo Websocket', url: '/echo', component: EchoHooksPreview },
     { name: 'Echo Websocket Classes', url: '/echoclasses', component: EchoPreview },
     { name: 'Prototype Test', url: '/prototest', component: ProtoTestPreview },
-    { name: 'Graph Demo', url: '/graphdemo', component: GraphDemoPreview },
-    { name: 'AG Grid Demo', url: '/aggriddemo', component: AgGridDemo },
-    { name: 'Tic Tac Toe', url: '/tictactow', component: TicTacToe },
 //    { name:' Styled Component Demo', url: '/styled/component', component: StyledComponentDemo}
 
 ];

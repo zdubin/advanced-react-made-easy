@@ -40,7 +40,7 @@ const CounterExample: React.FC<CounterExampleProps> = ({ initialValue = 0 }: Cou
             </span>
 
             <span className='button-space'>
-                <Button variant="outlined" onClick={() => handleName(`${name}${counter}`)}>Name Change</Button>
+                <Button variant="outlined" onClick={() => handleName(`${name}${counter}`)}>Name change</Button>
             </span>
         </div>
     );
