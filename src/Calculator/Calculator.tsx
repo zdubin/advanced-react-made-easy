@@ -65,7 +65,8 @@ export const Calculator: React.FC<CalculatorProps> = ({ darkmode = false }: Calc
                     }
 
                     }                  
-                }>{k}</div>)
+                }
+                >{k}</div>)
             }
         </div>
         </div>

@@ -40,7 +40,16 @@
   &__pressed {
     border: 6px solid red;
   }
+
+  &:hover  {
+        background-color: white;
+    }
+
+  &:active {
+    background-color: rgb(95, 104, 136);
+  }
 }
+
 .total-box {
     background-color: #c0ddfa;
     color: #3a0f0f;
@@ -48,6 +57,12 @@
     justify-content: space-between;
     align-items: space-between;
     margin-bottom: 5px;
+
+    &:hover  {
+    
+        background-color: #c0ddfa;
+    }
+
   }
 .item {
     padding: 10px;
