@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/advanced-react-made-easy/static/css/main.dff53bf5.css",
-    "main.js": "/advanced-react-made-easy/static/js/main.c46f1a99.js",
+    "main.js": "/advanced-react-made-easy/static/js/main.63ad3b95.js",
     "static/js/573.9e1668da.chunk.js": "/advanced-react-made-easy/static/js/573.9e1668da.chunk.js",
     "static/css/345.7ac4512c.chunk.css": "/advanced-react-made-easy/static/css/345.7ac4512c.chunk.css",
     "static/js/345.d79a523e.chunk.js": "/advanced-react-made-easy/static/js/345.d79a523e.chunk.js",
@@ -18,7 +18,7 @@
     "static/js/711.96473043.chunk.js": "/advanced-react-made-easy/static/js/711.96473043.chunk.js",
     "static/css/367.03b6fe3e.chunk.css": "/advanced-react-made-easy/static/css/367.03b6fe3e.chunk.css",
     "static/js/367.ecc0ed4e.chunk.js": "/advanced-react-made-easy/static/js/367.ecc0ed4e.chunk.js",
-    "static/css/100.c64adbd7.chunk.css": "/advanced-react-made-easy/static/css/100.c64adbd7.chunk.css",
+    "static/css/100.3c682994.chunk.css": "/advanced-react-made-easy/static/css/100.3c682994.chunk.css",
     "static/js/100.f3c0da0a.chunk.js": "/advanced-react-made-easy/static/js/100.f3c0da0a.chunk.js",
     "static/js/787.28cb0dcd.chunk.js": "/advanced-react-made-easy/static/js/787.28cb0dcd.chunk.js",
     "static/js/151.e6203e28.chunk.js": "/advanced-react-made-easy/static/js/151.e6203e28.chunk.js",
@@ -29,7 +29,7 @@
     "static/js/772.f8e87c4a.chunk.js": "/advanced-react-made-easy/static/js/772.f8e87c4a.chunk.js",
     "index.html": "/advanced-react-made-easy/index.html",
     "main.dff53bf5.css.map": "/advanced-react-made-easy/static/css/main.dff53bf5.css.map",
-    "main.c46f1a99.js.map": "/advanced-react-made-easy/static/js/main.c46f1a99.js.map",
+    "main.63ad3b95.js.map": "/advanced-react-made-easy/static/js/main.63ad3b95.js.map",
     "573.9e1668da.chunk.js.map": "/advanced-react-made-easy/static/js/573.9e1668da.chunk.js.map",
     "345.7ac4512c.chunk.css.map": "/advanced-react-made-easy/static/css/345.7ac4512c.chunk.css.map",
     "345.d79a523e.chunk.js.map": "/advanced-react-made-easy/static/js/345.d79a523e.chunk.js.map",
@@ -46,7 +46,7 @@
     "711.96473043.chunk.js.map": "/advanced-react-made-easy/static/js/711.96473043.chunk.js.map",
     "367.03b6fe3e.chunk.css.map": "/advanced-react-made-easy/static/css/367.03b6fe3e.chunk.css.map",
     "367.ecc0ed4e.chunk.js.map": "/advanced-react-made-easy/static/js/367.ecc0ed4e.chunk.js.map",
-    "100.c64adbd7.chunk.css.map": "/advanced-react-made-easy/static/css/100.c64adbd7.chunk.css.map",
+    "100.3c682994.chunk.css.map": "/advanced-react-made-easy/static/css/100.3c682994.chunk.css.map",
     "100.f3c0da0a.chunk.js.map": "/advanced-react-made-easy/static/js/100.f3c0da0a.chunk.js.map",
     "787.28cb0dcd.chunk.js.map": "/advanced-react-made-easy/static/js/787.28cb0dcd.chunk.js.map",
     "151.e6203e28.chunk.js.map": "/advanced-react-made-easy/static/js/151.e6203e28.chunk.js.map",
@@ -58,6 +58,6 @@
   },
   "entrypoints": [
     "static/css/main.dff53bf5.css",
-    "static/js/main.c46f1a99.js"
+    "static/js/main.63ad3b95.js"
   ]
 }
