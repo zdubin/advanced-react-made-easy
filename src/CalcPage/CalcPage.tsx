@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
 import { Alert } from '@mui/material';
@@ -42,10 +42,12 @@ const CalcPage = () => {
     const [secondValue, setSecondValue] = useState<number>(0);
     const calcValues: CalcState = useSelector((state: RootState) => state.calc);
     const dispatch: Dispatch<AnyAction> = useDispatch();
+    const scrollToRef = useRef<null | HTMLDivElement>(null);
+
 
     useEffect(() => {
         // add the new message to state
-        setFirstValue(calcValues.firstValue);
+        setFirstValue(calcValues.firstValue); 
         setSecondValue(calcValues.secondValue);
     },
         [calcValues.firstValue, calcValues.secondValue]);
@@ -90,6 +92,14 @@ const CalcPage = () => {
                     Subtraction
                 </Button>
             </span>
+
+            <span className='button-space'>
+                <Button className='button-space' variant="outlined"
+                    onClick={() => scrollToRef.current?.scrollIntoView({ behavior: 'smooth' }) }
+                >
+                    Scroll to Bottom
+                </Button>
+            </span>
             <hr />
             {calcValues.total ?
                 <h4 className='calc__answer' data-testid='total'>{calcValues.firstValue} {calcValues.lastOperation} {calcValues.secondValue} = {calcValues.total}</h4>
@@ -129,6 +139,7 @@ const CalcPage = () => {
                     </AccordionDetails>
                 </Accordion>
             )}
+            <div ref={scrollToRef}></div>
         </div>
 
     );

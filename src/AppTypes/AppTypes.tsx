@@ -32,4 +32,8 @@ export type CounterExampleProps = {
     initialValue: number;
 }
 
+export type CalculatorProps = {
+    darkmode?: boolean;
+}
+
 export type XorO = 'X' | 'O' | null;

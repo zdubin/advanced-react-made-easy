@@ -1,6 +1,6 @@
 import React, { lazy, Suspense, createContext, useMemo, useState, Children } from "react";
 //import CounterExample from './CounterExample';
-import { BrowserRouter as Router, Routes, Route, NavLink, Navigate  } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, NavLink, Navigate } from "react-router-dom";
 import { Provider } from 'react-redux';
 import { store } from './store/store';
 import { UserType, childProps, LazyComponent } from './AppTypes/AppTypes';
@@ -15,6 +15,7 @@ const CalcPagePreview = lazy(() => import('./CalcPage/CalcPage'));
 const GraphDemoPreview = lazy(() => import('./GraphDemo/GraphDemo'));
 const AgGridDemo = lazy(() => import('./AgGridDemo/AgGridDemo'));
 const TicTacToe = lazy(() => import('./TicTacToe/TicTacToe'));
+const Calculator = lazy(() => import('./Calculator/Calculator'));
 
 //const StyledComponentDemo = lazy(() => import('./StyledComponentDemo/StyledComponentDemo'));
 
@@ -29,7 +30,7 @@ const lazyComponents: LazyComponent[] = [
     { name: 'Echo Websocket', url: '/echo', component: EchoHooksPreview },
     { name: 'Echo Websocket Classes', url: '/echoclasses', component: EchoPreview },
     { name: 'Prototype Test', url: '/prototest', component: ProtoTestPreview },
-//    { name:' Styled Component Demo', url: '/styled/component', component: StyledComponentDemo}
+    //    { name:' Styled Component Demo', url: '/styled/component', component: StyledComponentDemo}
 
 ];
 
@@ -43,7 +44,7 @@ export const SimpleHOCShowRoutes = ({ children }: childProps) => {
                 {React.Children.map(children, (child, i) => {
                     return <div style={{ minWidth: `${minWidth}%` }} key={`nav-${i}`}>
                         <div className="curved-edges panel__items" >
-                            <strong  className='panel__items__text-content' >{i}.</strong>
+                            <strong className='panel__items__text-content' >{i}.</strong>
                             {child}
                         </div>
                     </div>
@@ -104,7 +105,7 @@ function App() {
                 <Router>
                     <>
                         <SimpleHOCShowRoutes>
-                            {[{ name: 'Home', url: '/advanced-react-made-easy' }, ...lazyComponents].map((componentObj,i) =>
+                            {[{ name: 'Home', url: '/advanced-react-made-easy' }, ...lazyComponents].map((componentObj, i) =>
                                 <NavLink key={`nav-${i}`} to={componentObj.url}>
                                     {componentObj.name}
                                 </NavLink>
@@ -113,11 +114,12 @@ function App() {
                         <div className='panel' >
                             <Routes>
                                 <Route key={`route---0`} path="/advanced-react-made-easy" element={
-                                    <span>Home Sweet Home...</span>}>
+                                    <Calculator />}
+                                >
                                 </Route>
-                                {lazyComponents.map((componentObj,i) =>
+                                {lazyComponents.map((componentObj, i) =>
                                     <Route key={`rou-${i}`} path={componentObj.url} element={
-                                        <div  className="App" >
+                                        <div className="App" >
                                             <Suspense fallback={<span>Loading...</span>}>
                                                 <componentObj.component />
                                             </Suspense>
@@ -125,9 +127,9 @@ function App() {
                                     </Route>
                                 )
                                 }
-                                    <Route
-                                        path="*"
-                                        element={<Navigate to="/advanced-react-made-easy" replace />}
+                                <Route
+                                    path="*"
+                                    element={<Navigate to="/advanced-react-made-easy" replace />}
                                 />
 
                             </Routes>
