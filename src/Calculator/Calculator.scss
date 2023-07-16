@@ -12,7 +12,7 @@
 .calculator
 {
 	width: 66vw;
-	height: 66vh;
+	height: 76vh;
 	margin: 0 auto;
   background-color: #c0ddfa;
   color: #3a0f0f;
@@ -21,7 +21,7 @@
 	
 	display: grid;
 	grid-template:  
-            repeat(4, 1fr) / repeat(4, 1fr)
+            repeat(5, 1fr) / repeat(4, 1fr)
         ;
     margin-bottom: 20px;
 }
@@ -49,14 +49,20 @@
     background-color: rgb(95, 104, 136);
   }
 }
-
+.staged-operation {
+  background-color: lightyellow;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 15px;
+}
 .total-box {
     background-color: #c0ddfa;
     color: #3a0f0f;
     border: 6px solid #2c3e50;
-    justify-content: space-between;
+    //justify-content: space-between!important;
     align-items: space-between;
     margin-bottom: 5px;
+    min-height: 160px;
 
     &:hover  {
     
@@ -69,4 +75,7 @@
 }
 .fade-inline {
     display: inline;
+}
+.box.total-box {
+  justify-content: space-between;
 }

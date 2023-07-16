@@ -15,6 +15,7 @@ describe('Calculator component', () => {
     expect(screen.getByTestId('current')).toHaveTextContent('123');
     
     fireEvent.click(screen.getByText('+'));
+    fireEvent.click(screen.getByText('='));
     expect(screen.getByTestId('total')).toHaveTextContent('123');
     expect(screen.getByTestId('current')).toHaveTextContent('0');
     
@@ -23,18 +24,21 @@ describe('Calculator component', () => {
     expect(screen.getByTestId('current')).toHaveTextContent('45');
 
     fireEvent.click(screen.getByText('-'));
+    fireEvent.click(screen.getByText('='));
     expect(screen.getByTestId('total')).toHaveTextContent('78');
     expect(screen.getByTestId('current')).toHaveTextContent('0');
 
     fireEvent.click(screen.getByText('2'));
 
     fireEvent.click(screen.getByText('*'));
+    fireEvent.click(screen.getByText('='));
     expect(screen.getByTestId('total')).toHaveTextContent('156');
     expect(screen.getByTestId('current')).toHaveTextContent('0');
 
     fireEvent.click(screen.getByText('2'));
 
     fireEvent.click(screen.getByText('/'));
+    fireEvent.click(screen.getByText('='));
     expect(screen.getByTestId('total')).toHaveTextContent('78');
     expect(screen.getByTestId('current')).toHaveTextContent('0');
 
