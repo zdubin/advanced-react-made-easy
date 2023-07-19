@@ -1,33 +1,28 @@
-
-
 .main-container {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .total-current {
-    display: flex; 
+  display: flex;
 }
 
-.calculator
-{
-	width: 66vw;
-	height: 76vh;
-	margin: 0 auto;
+.calculator {
+  width: 66vw;
+  height: 76vh;
+  margin: 0 auto;
   background-color: #c0ddfa;
   color: #3a0f0f;
   border: 6px solid #2c3e50;
   border-radius: 10px;
-	
-	display: grid;
-	grid-template:  
-            repeat(5, 1fr) / repeat(4, 1fr)
-        ;
-    margin-bottom: 20px;
+
+  display: grid;
+  grid-template:
+    repeat(5, 1fr) / repeat(4, 1fr);
+  margin-bottom: 20px;
 }
 
-.box
-{
+.calcbox {
   border: 6px solid #2c3e50;
   border-radius: 2px;
   font-family: Helvetica;
@@ -41,41 +36,46 @@
     border: 6px solid red;
   }
 
-  &:hover  {
-        background-color: white;
-    }
+  &:hover {
+    background-color: white;
+  }
 
   &:active {
     background-color: rgb(95, 104, 136);
   }
 }
+
 .staged-operation {
   background-color: lightyellow;
   border-radius: 20px;
   padding: 10px;
   margin: 15px;
 }
+
 .total-box {
+  background-color: #c0ddfa;
+  color: #3a0f0f;
+  border: 6px solid #2c3e50;
+  //justify-content: space-between!important;
+  align-items: space-between;
+  margin-bottom: 5px;
+  min-height: 160px;
+
+  &:hover {
+
     background-color: #c0ddfa;
-    color: #3a0f0f;
-    border: 6px solid #2c3e50;
-    //justify-content: space-between!important;
-    align-items: space-between;
-    margin-bottom: 5px;
-    min-height: 160px;
-
-    &:hover  {
-    
-        background-color: #c0ddfa;
-    }
-
   }
+
+}
+
 .item {
-    padding: 10px;
+  padding: 10px;
 }
+
 .fade-inline {
-    display: inline;
+  display: inline;
 }
-.box.total-box {
+
+.calcbox.total-box {
   justify-content: space-between;
 }
