@@ -28,3 +28,14 @@
     border: 6px solid red;
   }
 }
+@media (max-width: 800px) {
+.box
+{
+  font-size: 4em;
+}
+.game-board
+{
+	width: 500px;
+	height: 500px;
+}
+}

@@ -114,7 +114,10 @@ function App() {
                         <div className='panel' >
                             <Routes>
                                 <Route key={`route---0`} path="/advanced-react-made-easy" element={
-                                    <Calculator />}
+                                    <Suspense fallback={<span>Loading...</span>}>
+                                        <Calculator />
+                                    </Suspense>
+                                }
                                 >
                                 </Route>
                                 {lazyComponents.map((componentObj, i) =>

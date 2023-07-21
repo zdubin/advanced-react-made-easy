@@ -53,9 +53,9 @@ export const Calculator: React.FC<CalculatorProps> = ({ darkmode = false }: Calc
                 {stagedOp ? <div className="staged-operation"> Staged: {stagedOp} </div> : null}
                 <div className="item">Current: <Fade className='fade-inline' in={current === oldCurrent} data-testid='current'><span>{current}</span></Fade></div>
             </div>
-            <div className="calculator">
+            <div className="calculator" >
                 {
-                    calcKeys.map((k, i) => <div className="calcbox" key={`${k}-${i}`} onClick={() => {
+                    calcKeys.map((k, i) => <div className={['=','R'].includes(k) ? "calcbox wide-buttons" : "calcbox"} key={`${k}-${i}`} onClick={() => {
                         if (k >= '0' && k <= '9') {
                             setCurrent(10 * current + Number(k));
                         }
