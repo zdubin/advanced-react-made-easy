@@ -29,13 +29,27 @@
   }
 }
 @media (max-width: 800px) {
-.box
-{
-  font-size: 4em;
-}
+
 .game-board
 {
-	width: 500px;
-	height: 500px;
+	width: 400px;
+	height: 400px;
 }
+}
+@media (max-width: 800px) {
+
+  .game-board
+  {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+@media (min-width: 801px) and (max-width: 1000px) {
+
+  .game-board
+  {
+    width: 500px;
+    height: 500px;
+  }
 }
